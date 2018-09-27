@@ -8,6 +8,8 @@ extends KinematicBody2D
 const MOTION_SPEED = 160 # Pixels/second
 var fireCooldown = 0
 var aim = Vector2()
+var bullet_scene = load("res://Bullet.tscn")
+
 
 func _physics_process(delta):
 	var motion = Vector2()
@@ -46,11 +48,10 @@ func _physics_process(delta):
 		rotation = motion.angle()
 	
 	if Input.is_action_pressed("fire") and fireCooldown < (OS.get_ticks_msec()):
-		var scene = load("res://Bullet.tscn")
-		var scene_instance = scene.instance()
+		var scene_instance = bullet_scene.instance()
 		scene_instance.set_name("bullet")
 		scene_instance.transform = transform
-		scene_instance.rotation = rotation 
+		scene_instance.rotation = rotation + rand_range(-0.05,0.05)
 		get_parent().add_child(scene_instance)
 		fireCooldown = OS.get_ticks_msec() + 100
 
