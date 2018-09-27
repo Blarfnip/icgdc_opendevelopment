@@ -87,6 +87,6 @@ position = Vector2( 312, 216 )
 
 [node name="Trigger2" parent="." index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 200, 344 )
+position = Vector2( 232, 376 )
 
 
