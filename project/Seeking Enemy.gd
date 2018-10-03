@@ -24,14 +24,15 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
-	acc = vel.normalized() - 0.3 * ((target - position).normalized())
-	acc *= -0.1
+	var dist = position.distance_to(target)
 	
-	
-	vel += acc
-	vel = vel.normalized() * 1
-	position += vel
-	acc *= 0
+	if (dist > 20):
+		acc = vel.normalized() - 0.3 * ((target - position).normalized())
+		acc *= -0.1
+		vel += acc
+		vel = vel.normalized() * 1
+		position += vel
+		acc *= 0
 	pass
 	
 	
