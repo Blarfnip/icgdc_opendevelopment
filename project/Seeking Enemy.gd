@@ -14,7 +14,6 @@ func _ready():
 	# Initialization here
 	player = get_node("../player")
 	target = player.position
-	connect("body_entered", self, "body_entered")
 	pass
 
 func _process(delta):
@@ -34,11 +33,6 @@ func _physics_process(delta):
 	position += vel
 	acc *= 0
 	pass
-	
-func body_entered(body):
-	
-	pass
-	
 	
 	
 	
