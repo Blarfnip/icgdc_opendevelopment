@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://MainframeTileset.tres" type="TileSet" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://OverworldTrigger.tscn" type="PackedScene" id=3]
+
+[node name="Mainframe" type="Node2D"]
+
+position = Vector2( -0.497131, 1.84457 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 65536, 0, 0, 65556, 0, 0, 131072, 0, 0, 131092, 0, 0, 196608, 0, 0, 196628, 0, 0, 262144, 0, 0, 262164, 0, 0, 327680, 0, 0, 327700, 0, 0, 393216, 0, 0, 393236, 0, 0, 458752, 0, 0, 458772, 0, 0, 524288, 0, 0, 524308, 0, 0, 589824, 0, 0, 589844, 0, 0, 655360, 0, 0, 655380, 0, 0, 720896, 0, 0, 720916, 0, 0, 786432, 0, 0, 786452, 0, 0, 851968, 0, 0, 851988, 0, 0, 917504, 0, 0, 917524, 0, 0, 983040, 0, 0, 983060, 0, 0, 1048576, 0, 0, 1048596, 0, 0, 1114112, 0, 0, 1114132, 0, 0, 1179648, 0, 0, 1179668, 0, 0, 1245184, 0, 0, 1245204, 0, 0, 1310720, 0, 0, 1310721, 0, 0, 1310722, 0, 0, 1310723, 0, 0, 1310724, 0, 0, 1310725, 0, 0, 1310726, 0, 0, 1310727, 0, 0, 1310728, 0, 0, 1310729, 0, 0, 1310730, 0, 0, 1310731, 0, 0, 1310732, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1310738, 0, 0, 1310739, 0, 0, 1310740, 0, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 174.101, 160.933 )
+collision_layer = 17
+collision_mask = 17
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="Trigger" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 172.378, 47.8327 )
+
+
